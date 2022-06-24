@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+$Poppins: "Poppins", sans-serif;
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+// colors
+//$dark: rgb(45, 105, 68);
+$dark: rgb(69, 201, 120);
+$light: #fff;
+$primary: rgb(14, 41, 131);
+$bg: rgb(244, 244, 255);
+
+// spacing
+$spacing-md: 16px;
+$spacing-lg: 42px;
+
+// border radius
+$borderRadius: 12px;
+
+// header height
+$headerHeight: 60px;
+
+
+@mixin breakpoint($point) {
+    @if $point == md {
+        // 768px
+        @media (min-width: 48em) {
+            @content;
+        }
+    }
+}
