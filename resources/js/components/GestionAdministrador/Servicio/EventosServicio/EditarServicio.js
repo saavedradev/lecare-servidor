@@ -10,7 +10,7 @@ function EditarServicio(event,campos, idServicio, setservicios){
         duracion: campos.duracion,
     };
     event.preventDefault();
-    axios.put(`http://127.0.0.1:8000/api/servicio/${idServicio}`,data).then((res)=>{
+    axios.put(`https://lecarespa.herokuapp.com/api/servicio/${idServicio}`,data).then((res)=>{
         if(res.data.status==200){
             setservicios(res.data.servicios);
             swal("Success", res.data.message, "success")

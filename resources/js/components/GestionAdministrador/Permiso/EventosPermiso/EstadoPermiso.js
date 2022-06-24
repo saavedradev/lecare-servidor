@@ -3,7 +3,7 @@ import Swal from 'sweetalert2'
 import axios from 'axios'
 function EstadoPermiso(e,idPermiso,setTable) {
     function editar(data){
-        axios.put(`http://127.0.0.1:8000/api/permiso/${idPermiso}`,data).then((res)=>{
+        axios.put(`https://lecarespa.herokuapp.com/api/permiso/${idPermiso}`,data).then((res)=>{
         if(res.data.status==200){
             swal("Success", res.data.message, "success")
             setTable(res.data.permisos)

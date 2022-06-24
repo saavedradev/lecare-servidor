@@ -50,7 +50,7 @@ const PageServicio = () => {
     const [servicios, setDataServices] = useState([]);
     const [search, setSearch] = useState("");
     const [filteredServicios, setFilteredServicios] = useState([]);
-    const url = "http://127.0.0.1:8000/api/servicios";
+    const url = "https://lecarespa.herokuapp.com/api/servicios";
     const showData = async () => {
         const response = await fetch(url);
         const dataServicios = await response.json();

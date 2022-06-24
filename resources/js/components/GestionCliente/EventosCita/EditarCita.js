@@ -25,7 +25,7 @@ function EditarCita(
         servicios: idServicios
     };
     axios.get("/sanctum/csrf-cookie").then((response) => {
-        axios.put(`http://127.0.0.1:8000/api/citaCliente/${campos.id}`,data).then((res) => {
+        axios.put(`https://lecarespa.herokuapp.com/api/citaCliente/${campos.id}`,data).then((res) => {
             if (res.data.status === 200) {
                 swal("Editado Exitosamente", res.data.message, "success");
                 setTableCitas(res.data.citas);

@@ -11,7 +11,7 @@ function VerEmpleado(
     setKey
 ) {
     event.preventDefault();
-    axios.get(`http://127.0.0.1:8000/api/cita/${idCita}`).then((res) => {
+    axios.get(`https://lecarespa.herokuapp.com/api/cita/${idCita}`).then((res) => {
         const citaBuscada = res.data.cita;
         setCita({
             ...cita,

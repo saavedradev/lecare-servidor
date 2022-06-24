@@ -10,7 +10,7 @@ function EditarPermiso(event,permisoValues,setPermisoValues,setTablePermiso,vaci
         hora_final: permisoValues.hora_final,
         motivo: permisoValues.motivo,
     }
-    axios.put(`http://127.0.0.1:8000/api/permisoEmpleado/${permisoValues.id}`,data).then((res)=>{
+    axios.put(`https://lecarespa.herokuapp.com/api/permisoEmpleado/${permisoValues.id}`,data).then((res)=>{
         if(res.data.status==200){
             const permisos= res.data.permisos;
             setTablePermiso(permisos);

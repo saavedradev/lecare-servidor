@@ -8,7 +8,7 @@ function BuscarUser(valuesUser, setValuesUser) {
     };
 
     axios.get("/sanctum/csrf-cookie").then((response) => {
-        axios.get(`http://127.0.0.1:8000/api/buscarUser/${valuesUser.id}`, data).then((res) => {
+        axios.get(`https://lecarespa.herokuapp.com/api/buscarUser/${valuesUser.id}`, data).then((res) => {
             if (res.data.status === 200) {
                 setValuesUser({...valuesUser,...res.data.user})
             }else{

@@ -31,7 +31,7 @@ import HeaderEmpleado from '../HeaderEmpleado';
     const [keyTab, setKeyTab] = useState("cita");
     const [filteredCitas, setFilteredCitas] = useState([]);
     const [filteredCitasDay, setFilteredCitasDay] = useState([]);
-    const urlCitas = `http://127.0.0.1:8000/api/jornadaCitas/${cita.cedula_empleado}`;
+    const urlCitas = `https://lecarespa.herokuapp.com/api/jornadaCitas/${cita.cedula_empleado}`;
     FuncionListaDatos(urlCitas, null, setFilteredCitas);
     const onChangeBusquedaCitaDay = (event) => {
         event.preventDefault();

@@ -9,7 +9,7 @@ function CrearServicio (event, campos, setvariableTable,setErrores){
         duracion: campos.duracion,
     };
     axios.get("/sanctum/csrf-cookie").then((response) => {
-        axios.post("http://127.0.0.1:8000/api/servicio", data).then((res) => {
+        axios.post("https://lecarespa.herokuapp.com/api/servicio", data).then((res) => {
             if (res.data.status === 200) {
                 setvariableTable(res.data.servicios);
                 swal("Registrado Exitosamente", res.data.message, "success")

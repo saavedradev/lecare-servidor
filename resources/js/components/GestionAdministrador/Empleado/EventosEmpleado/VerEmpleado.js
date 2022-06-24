@@ -4,7 +4,7 @@ import React from 'react'
 
 function VerEmpleado(event,mostrarpagina, idEmpleado,setServiciosEmpleado, setEmpleado,empleado,setKey) {
   event.preventDefault();
-  axios.get(`http://127.0.0.1:8000/api/empleado/${idEmpleado}`).then((res)=>{
+  axios.get(`https://lecarespa.herokuapp.com/api/empleado/${idEmpleado}`).then((res)=>{
       const empleadoBuscado= res.data.empleado;
       empleadoBuscado.rol = res.data.rol
       setEmpleado({...empleado,...empleadoBuscado});

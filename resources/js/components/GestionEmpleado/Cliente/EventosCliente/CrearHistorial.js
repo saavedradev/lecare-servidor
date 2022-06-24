@@ -31,7 +31,7 @@ function CrearHistorial(event,valueCamposHistorial,setValueCamposHistorial,vacia
         extremidades: valueCamposHistorial.extremidades,
         diagnostico:valueCamposHistorial.diagnostico
     }
-    axios.post("http://127.0.0.1:8000/api/historial",data).then((res)=>{
+    axios.post("https://lecarespa.herokuapp.com/api/historial",data).then((res)=>{
         if(res.data.status==200){
 
             setTable(res.data.historialMedicos);

@@ -50,7 +50,7 @@ const PagePermiso = () => {
     const [permisos, setDataPermisos] = useState([]);
     const [search, setSearch] = useState("");
     const [filteredPermisos, setFilteredPermisos] = useState([]);
-    const url = `http://127.0.0.1:8000/api/permisosEmpleado/${registerInput.cedula_empleado}`;
+    const url = `https://lecarespa.herokuapp.com/api/permisosEmpleado/${registerInput.cedula_empleado}`;
     FuncionListaDatos(url, setDataPermisos, setFilteredPermisos);
     useEffect(() => {
         const result = permisos.filter((element) => {

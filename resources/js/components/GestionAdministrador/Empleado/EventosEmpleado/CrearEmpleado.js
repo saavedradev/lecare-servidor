@@ -22,7 +22,7 @@ function CrearEmpleado(event, campos,setRegister,vaciarCampos, setvariableTable,
         servicios: idServicios
     };
     axios.get("/sanctum/csrf-cookie").then((response) => {
-        axios.post("http://127.0.0.1:8000/api/empleado", data).then((res) => {
+        axios.post("https://lecarespa.herokuapp.com/api/empleado", data).then((res) => {
             if (res.data.status === 200) {
                 setvariableTable(res.data.empleados);
                 swal("Registrado exitosamente", res.data.message, "success")

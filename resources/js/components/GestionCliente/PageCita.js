@@ -42,12 +42,12 @@ const handleInput = (event) => {
 const [listadoServicios, setlistadoServicios] = useState([]);
 const [listadoServiciosSolicitados, setListadoServiciosSolicitados] =
     useState([]);
-const urlServicios = "http://127.0.0.1:8000/api/servicios";
+const urlServicios = "https://lecarespa.herokuapp.com/api/servicios";
 FuncionListaDatos(urlServicios, null, setlistadoServicios);
 const [key, setKey] = useState("Crear");
 const [listadoCitas, setListadoCitas] = useState([]);
 const [filteredCitas, setFilteredCitas] = useState([]);
-const urlCitas = `http://127.0.0.1:8000/api/citasCliente/${citaValues.cedula_cliente}`;
+const urlCitas = `https://lecarespa.herokuapp.com/api/citasCliente/${citaValues.cedula_cliente}`;
 FuncionListaDatos(urlCitas, setListadoCitas, setFilteredCitas);
 const [search, setSearch] = useState("");
 BusquedaCita(listadoCitas,setFilteredCitas,search)

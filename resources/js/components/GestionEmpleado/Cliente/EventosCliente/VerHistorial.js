@@ -3,7 +3,7 @@ import axios from 'axios';
 function VerHistorial(event,idHistorial,setValuesHistorialCliente,valuesHistorialCliente,setKey,page) {
 event.preventDefault();
 setValuesHistorialCliente({...valuesHistorialCliente,idHistorial:idHistorial});
-axios.get(`http://127.0.0.1:8000/api/historial/${idHistorial}`).then((res) => {
+axios.get(`https://lecarespa.herokuapp.com/api/historial/${idHistorial}`).then((res) => {
         const historialEncontrado = res.data.historial;
         const antecedente= res.data.antecedente;
         const examenFisico= res.data.examenFisico;

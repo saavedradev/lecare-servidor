@@ -6,7 +6,7 @@ export default function cambiarTab(setkey,info,setTable,valueEmpleado) {
         cedula:valueEmpleado.cedula_empleado,
         fecha: info
     }
-    axios.post("http://127.0.0.1:8000/api/jornadaCitasDia",data).then((res) => {
+    axios.post("https://lecarespa.herokuapp.com/api/jornadaCitasDia",data).then((res) => {
          setTable(res.data.citas);
          console.log(res.data.id)
         if(!(res.data.citas.length===0)){

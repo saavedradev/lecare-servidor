@@ -23,7 +23,7 @@ function EditarEmpleado(event,campos, setEmpleados,setRegister,servicioSeleccion
         servicios: idServicios
     };
     event.preventDefault();
-    axios.put(`http://127.0.0.1:8000/api/empleado/${campos.id}`,data).then((res)=>{
+    axios.put(`https://lecarespa.herokuapp.com/api/empleado/${campos.id}`,data).then((res)=>{
         if(res.data.status==200){
             setEmpleados(res.data.empleados);
             setRegister(vaciarCampos)

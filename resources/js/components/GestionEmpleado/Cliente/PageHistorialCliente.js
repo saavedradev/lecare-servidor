@@ -82,7 +82,7 @@ const PageHistorialCliente = () => {
         });
         setErrores({ ...error_list, [event.target.name]: "" });
     };
-    const urlCliente = `http://127.0.0.1:8000/api/historialCliente/${valuesHistorialCliente.cedula}`;
+    const urlCliente = `https://lecarespa.herokuapp.com/api/historialCliente/${valuesHistorialCliente.cedula}`;
     useEffect(() => {
         const loadPaciente = async () => {
             const response = await axios.get(urlCliente);
@@ -97,7 +97,7 @@ const PageHistorialCliente = () => {
     const [filteredHistorialCliente, setfilteredHistorialCliente] = useState(
         []
     );
-     const urlHistorialCliente = `http://127.0.0.1:8000/api/historiales/${valuesHistorialCliente.cedula}`;
+     const urlHistorialCliente = `https://lecarespa.herokuapp.com/api/historiales/${valuesHistorialCliente.cedula}`;
      FuncionListaDatos(urlHistorialCliente, null, setfilteredHistorialCliente);
     const [key, setKey] = useState("Crear");
     const headerEmpleado = [

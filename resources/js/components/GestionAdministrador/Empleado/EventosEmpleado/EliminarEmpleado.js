@@ -13,7 +13,7 @@ function EliminarEmpleado(event, idEmpleado, empleados, setEmpleados) {
     }).then((resultado) => {
         if (resultado.value) {
             axios
-                .delete(`http://127.0.0.1:8000/api/empleado/${idEmpleado}`)
+                .delete(`https://lecarespa.herokuapp.com/api/empleado/${idEmpleado}`)
                 .then((res) => {
                     const newArray = empleados.filter(
                         (element) => element.id !== idEmpleado

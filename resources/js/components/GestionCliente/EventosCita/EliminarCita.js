@@ -13,7 +13,7 @@ function EliminarCita(event,idCita,setCitas,citas) {
     }).then((resultado) => {
         if (resultado.value) {
             axios
-                .delete(`http://127.0.0.1:8000/api/citaCliente/${idCita}`)
+                .delete(`https://lecarespa.herokuapp.com/api/citaCliente/${idCita}`)
                 .then((res) => {
                     const newArray = citas.filter(
                         (element) => element.id !== idCita

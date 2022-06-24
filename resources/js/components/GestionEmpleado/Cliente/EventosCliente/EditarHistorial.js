@@ -30,7 +30,7 @@ function EditarHistorial(event,valueCamposHistorial,setValueCamposHistorial,vaci
         extremidades: valueCamposHistorial.extremidades,
         diagnostico:valueCamposHistorial.diagnostico
     }
-    axios.put(`http://127.0.0.1:8000/api/historial/${valueCamposHistorial.idHistorial}`,data).then((res)=>{
+    axios.put(`https://lecarespa.herokuapp.com/api/historial/${valueCamposHistorial.idHistorial}`,data).then((res)=>{
         if(res.data.status==200){
 
             setTable(res.data.historialMedicos);

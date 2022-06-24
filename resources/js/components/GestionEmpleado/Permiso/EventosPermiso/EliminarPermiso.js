@@ -13,7 +13,7 @@ function EliminarPermiso(event,idPermiso,tablePermisos,setTablePermisos) {
     }).then((resultado) => {
         if (resultado.value) {
             axios
-                .delete(`http://127.0.0.1:8000/api/permisoEmpleado/${idPermiso}`)
+                .delete(`https://lecarespa.herokuapp.com/api/permisoEmpleado/${idPermiso}`)
                 .then((res) => {
                     const newArray = tablePermisos.filter(
                         (element) => element.id !== idPermiso
