@@ -25,13 +25,13 @@ export const PagePerfil = () => {
         console.log(valuesUser.userRol);
         if (valuesUser.userRol == "Cliente") {
             const response = await fetch(
-                `http://127.0.0.1:8000/api/buscarCliente/${valuesUser.id}`
+                `https://lecarespa.herokuapp.com/api/buscarCliente/${valuesUser.id}`
             );
             const valor = await response.json();
             setValuesUser({ ...valuesUser, ...valor });
         } else {
             const response = await fetch(
-                `http://127.0.0.1:8000/api/buscarUser/${valuesUser.id}`
+                `https://lecarespa.herokuapp.com/api/buscarUser/${valuesUser.id}`
             );
             const valor = await response.json();
             setValuesUser({ ...valuesUser, ...valor });

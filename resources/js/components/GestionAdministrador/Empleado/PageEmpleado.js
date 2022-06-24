@@ -69,8 +69,8 @@ const PageEmpleado = () => {
         event.preventDefault();
         setKey("Crear");
     };
-    const urlEmpleados = "http://127.0.0.1:8000/api/empleados";
-    const urlServicios = "http://127.0.0.1:8000/api/servicios";
+    const urlEmpleados = "https://lecarespa.herokuapp.com/api/empleados";
+    const urlServicios = "https://lecarespa.herokuapp.com/api/servicios";
     FuncionListaDatos(urlEmpleados, setData, setFilteredEmpleados);
     FuncionListaDatos(urlServicios, null, setFilteredServicios);
     const [search, setSearch] = useState("");

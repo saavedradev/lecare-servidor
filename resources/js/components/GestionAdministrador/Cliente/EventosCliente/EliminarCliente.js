@@ -13,7 +13,7 @@ function EliminarCliente(event, idCliente, clientes, setClientes) {
     }).then((resultado) => {
         if (resultado.value) {
             axios
-                .delete(`http://127.0.0.1:8000/api/cliente/${idCliente}`)
+                .delete(`https://lecarespa.herokuapp.com/api/cliente/${idCliente}`)
                 .then((res) => {
                     const newArray = clientes.filter(
                         (element) => element.id !== idCliente

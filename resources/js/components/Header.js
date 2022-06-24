@@ -20,7 +20,7 @@ export const Header= ({children}) => {
     const navigate= useNavigate();
     const cerrarSesion = (event) =>{
     event.preventDefault();
-            axios.post("http://127.0.0.1:8000/api/logout",localStorage.getItem('auth-token')).then(res => {
+            axios.post("https://lecarespa.herokuapp.com/api/logout",localStorage.getItem('auth-token')).then(res => {
                 console.log(res.data.status)
                 if(res.data.status===200){
                     localStorage.removeItem('auth-token');

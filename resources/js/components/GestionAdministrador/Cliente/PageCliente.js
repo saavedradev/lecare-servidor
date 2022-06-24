@@ -59,7 +59,7 @@ const PageCliente = () => {
     const [clientes, setData] = useState([]);
     const [search, setSearch] = useState("");
     const [filteredClientes, setFilteredClientes] = useState([]);
-    const url = "http://127.0.0.1:8000/api/clientes";
+    const url = "https://lecarespa.herokuapp.com/api/clientes";
     const showData = async () => {
         const response = await fetch(url);
         const data = await response.json();

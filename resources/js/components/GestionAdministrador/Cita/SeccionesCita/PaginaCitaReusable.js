@@ -44,7 +44,7 @@ const PaginaCitaReusable = ({
     const estadosCita=[{id:1,estado:"Confirmada" },{id:2,estado:"Falta confirmar"}]
     const [clientes, setClientes] = useState([]);
     const [suggestions, setSuggestions] = useState([]);
-    const urlClientes = "http://127.0.0.1:8000/api/clientes";
+    const urlClientes = "https://lecarespa.herokuapp.com/api/clientes";
     useEffect(() => {
         const loadClientes = async () => {
             const response = await axios.get(urlClientes);

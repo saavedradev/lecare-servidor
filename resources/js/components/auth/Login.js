@@ -38,7 +38,7 @@ export const Login = () => {
             rol: localStorage.getItem('auth-rol'),
         };
         axios.get("/sanctum/csrf-cookie").then((response) => {
-            axios.post("http://127.0.0.1:8000/api/login", data).then((res) => {
+            axios.post("https://lecarespa.herokuapp.com/api/login", data).then((res) => {
                 if (res.data.status == 200) {
                     localStorage.setItem("auth-token", res.data.token);
                     localStorage.setItem("auth-name", res.data.userName);

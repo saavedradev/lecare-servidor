@@ -37,7 +37,7 @@ function CrearEmpleado(
     };
     console.log(campos.cedula_cliente)
     axios.get("/sanctum/csrf-cookie").then((response) => {
-        axios.post("http://127.0.0.1:8000/api/cita", data).then((res) => {
+        axios.post("https://lecarespa.herokuapp.com/api/cita", data).then((res) => {
             if (res.data.status === 200) {
                 swal("Registrado Exitosamente", res.data.message, "success");
                 setTableCitas(res.data.citas);

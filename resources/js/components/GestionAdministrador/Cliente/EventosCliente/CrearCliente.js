@@ -16,7 +16,7 @@ function CrearCliente (event, campos, setvariableTable,setErrores){
         realizadorRegistro: "administrador"
     };
     axios.get("/sanctum/csrf-cookie").then((response) => {
-        axios.post("http://127.0.0.1:8000/api/register", data).then((res) => {
+        axios.post("https://lecarespa.herokuapp.com/api/register", data).then((res) => {
             if (res.data.status === 200) {
                 setvariableTable(res.data.clientes);
                 swal("Registrado Exitosamente", res.data.message, "success")

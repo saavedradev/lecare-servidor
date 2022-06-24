@@ -53,8 +53,8 @@ const PageCita = () => {
     const [listadoServiciosSolicitados, setListadoServiciosSolicitados] =
         useState([]);
     const events = [{ title: "today's event", date: new Date() }];
-    const urlEmpleados = "http://127.0.0.1:8000/api/empleados";
-    const urlServicios = "http://127.0.0.1:8000/api/servicios";
+    const urlEmpleados = "https://lecarespa.herokuapp.com/api/empleados";
+    const urlServicios = "https://lecarespa.herokuapp.com/api/servicios";
     FuncionListaDatos(urlEmpleados, null, setListadoEmpleados);
     FuncionListaDatos(urlServicios, null, setlistadoServicios);
     console.log(listadoEmpleados);
@@ -64,7 +64,7 @@ const PageCita = () => {
     const [listadoCitas, setListadoCitas] = useState([]);
     const [filteredCitas, setFilteredCitas] = useState([]);
     const [filteredCitasDay, setFilteredCitasDay] = useState([]);
-    const urlCitas = "http://127.0.0.1:8000/api/citas";
+    const urlCitas = "https://lecarespa.herokuapp.com/api/citas";
     FuncionListaDatos(urlCitas, setListadoCitas, setFilteredCitas);
     const [searchDay, setSearchDay] = useState("");
     const [search, setSearch] = useState("");

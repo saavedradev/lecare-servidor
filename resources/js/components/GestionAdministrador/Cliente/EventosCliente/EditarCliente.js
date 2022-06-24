@@ -17,7 +17,7 @@ function EditarCliente(event,campos, idCliente, setClientes,setErrores){
         realizadorRegistro: "administrador"
     };
     event.preventDefault();
-    axios.put(`http://127.0.0.1:8000/api/cliente/${idCliente}`,EditCliente).then((res)=>{
+    axios.put(`https://lecarespa.herokuapp.com/${idCliente}`,EditCliente).then((res)=>{
         if(res.data.status==200){
             setClientes(res.data.clientes);
             swal("Editado Exitosamente", res.data.message, "success")
