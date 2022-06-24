@@ -36,7 +36,7 @@ const PaginaCitaReusable = ({
         <Fragment>
             <div class="col-md-1 me-5" >
                             <br />
-                            <a className="btn btn-primary mt-2"  > Registrar</a>
+                            <a className="btn btn-primary mt-2" href="/clientes" > Registrar</a>
              </div>
         </Fragment>
     ]

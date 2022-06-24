@@ -15,7 +15,7 @@ class ClienteController extends Controller{
     public function register(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'id' => 'required|numeric|between: 1000000, 9999999999|unique:clientes.id',
+            'id' => 'required|numeric|between: 1000000, 9999999999|unique:clientes,id',
             'primer_nombre' => 'required|regex:/^[\pL\s\-]+$/u',
             'segundo_nombre' => 'regex:/^[\pL\s\-]+$/u',
             'primer_apellido' => 'required|regex:/^[\pL\s\-]+$/u',
