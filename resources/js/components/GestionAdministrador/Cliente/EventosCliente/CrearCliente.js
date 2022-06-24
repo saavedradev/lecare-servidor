@@ -4,7 +4,7 @@ import swal from "sweetalert";
 function CrearCliente (event, campos, setvariableTable,setErrores){
     event.preventDefault();
     const data = {
-        cedula: campos.id,
+        id: campos.id,
         primer_nombre: campos.primer_nombre,
         segundo_nombre: campos.segundo_nombre,
         primer_apellido: campos.primer_apellido,
